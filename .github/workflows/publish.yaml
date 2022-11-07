@@ -12,8 +12,8 @@ jobs:
     - name: Build the hello-world Docker image
       run: |
         echo $CR_PAT | docker login ghcr.io -u Nerevahr --password-stdin
-        docker build . --tag ghcr.io/Nerevahr/hello-world:latest
-        docker run ghcr.io/Nerevahr/hello-world:latest
-        docker push ghcr.io/Nerevahr/hello-world:latest
+        docker build . --tag ghcr.io/nerevahr/hello-world:latest
+        docker run ghcr.io/nerevahr/hello-world:latest
+        docker push ghcr.io/nerevahr/hello-world:latest
       env:
         CR_PAT: ${{ secrets.CR_PAT }}
