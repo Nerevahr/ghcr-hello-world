@@ -16,4 +16,4 @@ jobs:
         docker run ghcr.io/nerevahr/hello-world:latest
         docker push ghcr.io/nerevahr/hello-world:latest
       env:
-        CR_PAT: ${{ secrets.CR_PAT }}
+        CR_PAT: ${{ secrets.GITHUB_TOKEN }}
